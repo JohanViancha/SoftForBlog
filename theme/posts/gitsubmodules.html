@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
 
 <html lang="en-us">
 
@@ -18,10 +24,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Neuton:wght@700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 	<!-- # CSS Plugins -->
-	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="../plugins/bootstrap/bootstrap.min.css">
 
 	<!-- # Main Style Sheet -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -30,7 +36,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light px-0">
       <a class="navbar-brand order-1 py-0" href="index.html">
-        <img loading="prelaod" decoding="async" class="img-fluid" src="images/logo.png" alt="Reporter Hugo">
+        <img loading="prelaod" decoding="async" class="img-fluid" src="../images/logo.png" alt="Reporter Hugo">
       </a>
       <div class="navbar-actions order-3 ml-0 ml-md-4">
         <button aria-label="navbar toggler" class="navbar-toggler border-0" type="button" data-toggle="collapse"
@@ -42,7 +48,7 @@
       </form>
       <div class="collapse navbar-collapse text-center order-lg-2 order-4" id="navigation">
         <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
-          <li class="nav-item"> <a class="nav-link" href="about.html">About Me</a>
+          <li class="nav-item"> <a class="nav-link" href="../about.html">About Me</a>
           </li>
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,29 +73,44 @@
 			<div class="row">
 				<div class="col-lg-8 mb-5 mb-lg-0">
 					<article>
-						<img loading="lazy" decoding="async" src="images/post/post-4.jpg" alt="Post Thumbnail" class="w-100">
+						<img loading="lazy" decoding="async" src="../images/post/DiagramaSubmodules.png" alt="Post Thumbnail" class="w-100">
 						<ul class="post-meta mb-2 mt-4">
 							<li>
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right:5px;margin-top:-4px" class="text-dark" viewBox="0 0 16 16">
 									<path d="M5.5 10.5A.5.5 0 0 1 6 10h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
 									<path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
 									<path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
-								</svg> <span>29 May, 2021</span>
+								</svg> <span>07 May, 2023</span>
 							</li>
 						</ul>
-						<h1 class="my-3">Top 7 Reasons to Visit Denver this Summer</h1>
+						<h1 class="my-3">¿Qué son los gitsubmodules? ¿Comó los implemento?</h1>
 						<ul class="post-meta mb-4">
-							<li> <a href="/categories/destination">destination</a>
+							<li> <a href="/categories/destination">Git</a>
+								<a href="/categories/destination">Submodules</a>
 							</li>
 						</ul>
 						<div class="content text-left">
-							<h1 id="heading">Heading</h1>
-							<p>Here is example of hedings. You can use this heading by following markdownify rules. For example: use <code>#</code> for heading 1 and use <code>######</code> for heading 6.</p>
-							<h2 id="emphasis">Emphasis</h2>
+							<h1 id="heading">¿Qués es git?</h1>
+							
+							<img src="../images/post/git.png" class="w-75" alt="Git">
+							<p>Git es un <em>sistema de control de versiones</em> distribuido que permite a los desarrolladores rastrear y administrar los cambios en el código fuente de un proyecto de software. Fue creado por Linus Torvalds en 2005 y se ha convertido en una herramienta ampliamente utilizada en la industria del desarrollo de software.</p>
+
+							<p>En su esencia, Git registra y almacena los cambios realizados en los archivos de un proyecto a lo largo del tiempo. Esto permite a los desarrolladores tener un historial completo de revisiones y versiones anteriores, lo que facilita la colaboración entre equipos, la reversión de cambios no deseados y la gestión de ramas de desarrollo.</p>
+								
+							<p>Una de las principales características de Git es que es un sistema de control de versiones distribuido. Esto significa que cada desarrollador que trabaja en un proyecto tiene una copia completa del repositorio Git en su máquina local, lo que permite trabajar de forma independiente y sin necesidad de una conexión constante a un servidor centralizado. Los cambios realizados en la copia local pueden ser fusionados con el repositorio principal en el servidor cuando sea necesario.</p>
+
+							<p>A menudo sucede que mientras está trabajando en un proyecto, necesita usar otro proyecto dentro de él. Tal vez sea una biblioteca desarrollada por un tercero o que esté desarrollando por separado y utilizando en múltiples proyectos principales. Surge un problema común en estos escenarios: desea poder tratar los dos proyectos por separado y aún poder usar uno del otro.</p>
+
+							<p>Git aborda este problema mediante el uso de <em>submódulos</em>, estos le permiten mantener un repositorio de Git como un subdirectorio de otro repositorio de Git. Esto le permite clonar otro repositorio en su proyecto y mantener sus confirmaciones separadas.</p>
+
+							<p>Strikethrough uses two tildes. <del>Scratch this.</del>
+
+							<h1 id="emphasis">¿Que son los gitsubomodules?</h1>
 							<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
 							<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
 							<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
-							<p>Strikethrough uses two tildes. <del>Scratch this.</del>
+
+							
 							</p>
 							<!-- table of content -->
 							<h2 id="link">Link</h2>
